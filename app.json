@@ -1,0 +1,26 @@
+{
+  "expo": {
+    "name": "tiktok-ui",
+    "slug": "tiktok-ui",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/Tiktok.png",
+    "splash": {
+      "image": "./assets/Tiktok.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}
