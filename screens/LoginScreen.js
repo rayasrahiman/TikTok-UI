@@ -7,6 +7,7 @@ import {
   Image,
   TouchableOpacity,
 } from "react-native";
+import  AsyncStorage  from "@react-native-community/async-storage";
 import * as Google from "expo-google-app-auth";
 import firebase from "firebase";
 
@@ -96,7 +97,8 @@ class LoginScreen extends Component {
       });
 
       if (result.type === "success") {
-        this.props.navigation.setParams("Profile", { user: result.user });
+        await AsyncStorage.setItem("user", JSON.stringify(result.user));
+        // this.props.navigation.navigate("Profile");
         this.onSignIn(result);
         return result.accessToken;
       } else {

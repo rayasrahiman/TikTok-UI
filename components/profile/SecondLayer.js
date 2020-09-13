@@ -14,14 +14,16 @@ HEADER_MIN_HEIGHT = 70;
 PROFILE_IMAGE_MAX_HEIGHT = 80;
 PROFILE_IMAGE_MIN_HEIGHT = 40;
 const SecondLayer = (props) => {
-  //   console.log("user obj", props.user);
+  console.log("user obj in props", props.user);
+  const DEFAULT_AVATAR =  require("../../assets/default-user.png");
+  const fetchedAvatar = props.user.photoUrl && { uri: props.user.photoUrl };
   return (
     <View style={{ ...styles.second, ...props.style }}>
       <View style={{ flexDirection: "row" }}>
         <View style={{ ...styles.imageContainer, ...props.style }}>
           <Image
             style={{ ...styles.image, ...props.style }}
-            source={require("../../assets/default-user.png")}
+            source={fetchedAvatar || DEFAULT_AVATAR}
           />
         </View>
         <View
@@ -57,12 +59,11 @@ const SecondLayer = (props) => {
       </View>
       <Text style={{ ...styles.name, ...props.style }}>
         {/* {props.name} */}
-        UserName
-        {/* {props.user && props.user.name ? props.user.name : "default name"} */}
+        {/* UserName */}
+        {props.user && props.user.name ? props.user.name : "default name"}
       </Text>
       <Text style={{ ...styles.id, ...props.style }}>
-        ID: 39393939393939
-        {/* ID: {props.user && props.user.id ? props.user.id : "default id"} */}
+        ID: {props.user && props.user.id ? props.user.id : "default id"}
       </Text>
       <Text style={{ ...styles.bio, ...props.style }}>No bio yet</Text>
       <View style={{ ...styles.textContainer, ...props.style }}>

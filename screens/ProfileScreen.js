@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { View, StyleSheet } from "react-native";
+import AsyncStorage from '@react-native-community/async-storage'
 import FirstLayer from "../components/profile/FirstLayer";
 import SecondLayer from "../components/profile/SecondLayer";
 import ThirdLayer from "../components/profile/ThirdLayer";
@@ -9,21 +10,25 @@ import firebase from "firebase";
 console.disableYellowBox = true;
 
 const ProfileScreen = (props) => {
-  // const [user, setUser] = useState({});
+  const [user, setUser] = useState({});
 
-  // useEffect(() => {
-  //     const userObj = props.route && props.route.params ? props.route.params.user : {};
+  useEffect(() => {
+      async function loadUserData() {
+        const userObj = await AsyncStorage.getItem('user');
+        console.log('userObj', JSON.parse(userObj));
 
-  //     userObj && setUser(userObj);
+        userObj && setUser(JSON.parse(userObj));
+      }
 
-  // }, [props.route])
+      loadUserData();
+  }, [setUser])
 
-  // const user = props.navigation.getParam('user')
+  console.log('what in our state', user)
 
   return (
     <View style={styles.container}>
       <FirstLayer navigation={props.navigation} />
-      <SecondLayer />
+      <SecondLayer user={user} />
       <ThirdLayer />
       <FourthLayer />
     </View>
