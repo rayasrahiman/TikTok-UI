@@ -6,6 +6,9 @@ import { createDrawerNavigator, DrawerItems } from "react-navigation-drawer";
 import LoadingScreen from "../screens/LoadingScreen";
 import LoginScreen from "../screens/LoginScreen";
 import ProfileScreen from "../screens/ProfileScreen";
+import ChatScreen from "../screens/ChatScreen";
+import ExploreScreen from "../screens/ExploreScreen";
+import WallScreen from "../screens/WallScreen";
 import firebase from "firebase";
 // import TopTabNavigator from '../../navigation/TopTabNavigator'
 
@@ -32,6 +35,18 @@ const ProfileStackNavigator = createStackNavigator({
     screen: ProfileScreen,
     navigationOptions: {
       headerShown: false,
+    },
+  },
+  Chat: {
+    screen: ChatScreen,
+  },
+  Explore: {
+    screen: ExploreScreen,
+  },
+  Wall: {
+    screen: WallScreen,
+    navigationOptions: {
+      headerShown: true,
     },
   },
 });

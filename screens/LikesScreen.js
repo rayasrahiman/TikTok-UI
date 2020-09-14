@@ -1,21 +1,21 @@
-import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import React from "react";
+import { View, Text, StyleSheet } from "react-native";
 
 const LikesScreen = (props) => {
-    return (
-        <View style={styles.container}>
-            <Text>No Likes yet</Text>
-        </View>
-    );
+  return (
+    <View style={styles.container}>
+      <Text>No Likes yet</Text>
+    </View>
+  );
 };
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: 'black',
-    },
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "black",
+  },
 });
 
 export default LikesScreen;

@@ -3,7 +3,6 @@ import { StyleSheet, Text, View } from "react-native";
 import * as Font from "expo-font";
 import { AppLoading } from "expo";
 import { enableScreens } from "react-native-screens";
-import ProfileScreen from "./screens/ProfileScreen";
 import ProfileSwitchNavigator from "./navigation/ProfileNavigator";
 
 import * as firebase from "firebase";
@@ -34,11 +33,7 @@ export default function App() {
     );
   }
 
-  return (
-    <ProfileSwitchNavigator />
-    // <ProfileScreen />
-    // <ProfileNavigator/>
-  );
+  return <ProfileSwitchNavigator />;
 }
 
 const styles = StyleSheet.create({
