@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { View, StyleSheet } from "react-native";
 import AsyncStorage from "@react-native-community/async-storage";
-import FirstLayer from "../components/profile/FirstLayer";
-import SecondLayer from "../components/profile/SecondLayer";
-import ThirdLayer from "../components/profile/ThirdLayer";
-import FourthLayer from "../components/profile/FourthLayer";
-import firebase from "firebase";
+import TopMenuBar from "../components/profile/TopMenuBar";
+import UserProfileDetails from "../components/profile/UserProfileDetails";
+import UserVideosLikes from "../components/profile/UserVideosLikes";
+import BottomTabBar from "../components/profile/BottomTabBar";
 
 console.disableYellowBox = true;
 
@@ -32,10 +31,10 @@ const ProfileScreen = (props) => {
 
   return (
     <View style={styles.container}>
-      <FirstLayer navigation={props.navigation} />
-      <SecondLayer user={user} />
-      <ThirdLayer />
-      <FourthLayer
+      <TopMenuBar navigation={props.navigation} />
+      <UserProfileDetails user={user} />
+      <UserVideosLikes />
+      <BottomTabBar
         wall={() => props.navigation.navigate("Wall")}
         explore={() => props.navigation.navigate("Explore")}
         chat={() => props.navigation.navigate("Chat")}

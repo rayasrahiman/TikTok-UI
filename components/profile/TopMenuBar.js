@@ -3,7 +3,7 @@ import { View, StyleSheet, Platform } from "react-native";
 import HeaderButton from "../HeaderButton";
 import { HeaderButtons, Item } from "react-navigation-header-buttons";
 
-const FirstLayer = (props) => {
+const TopMenuBar = (props) => {
   return (
     <View style={{ ...styles.first, ...props.style }}>
       <HeaderButtons HeaderButtonComponent={HeaderButton}>
@@ -38,4 +38,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default FirstLayer;
+export default TopMenuBar;

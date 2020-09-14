@@ -13,7 +13,7 @@ HEADER_MAX_HEIGHT = 120;
 HEADER_MIN_HEIGHT = 70;
 PROFILE_IMAGE_MAX_HEIGHT = 80;
 PROFILE_IMAGE_MIN_HEIGHT = 40;
-const SecondLayer = (props) => {
+const UserProfileDetails = (props) => {
   // console.log("user obj in props", props.user);
   const DEFAULT_AVATAR = require("../../assets/default-user.png");
   const fetchedAvatar = props.user.photoUrl && { uri: props.user.photoUrl };
@@ -132,4 +132,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default SecondLayer;
+export default UserProfileDetails;

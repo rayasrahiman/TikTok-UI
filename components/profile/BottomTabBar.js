@@ -8,7 +8,7 @@ import {
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
-const FourthLayer = (props) => {
+const BottomTabBar = (props) => {
   let Touchable = TouchableOpacity;
   if (Platform.OS === "android") {
     Touchable = TouchableWithoutFeedback;
@@ -83,4 +83,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default FourthLayer;
+export default BottomTabBar;

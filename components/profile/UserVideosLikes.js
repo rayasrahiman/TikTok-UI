@@ -2,7 +2,7 @@ import React from "react";
 import { View, StyleSheet } from "react-native";
 import TopTabNavigator from "../../navigation/TopTabNavigator";
 
-const ThirdLayer = (props) => {
+const UserVideosLikes = (props) => {
   return (
     <View style={{ ...styles.third, ...props.style }}>
       <TopTabNavigator />
@@ -17,4 +17,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ThirdLayer;
+export default UserVideosLikes;
