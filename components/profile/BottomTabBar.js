@@ -5,6 +5,7 @@ import {
   Platform,
   TouchableOpacity,
   TouchableWithoutFeedback,
+  Dimensions,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
@@ -73,10 +74,10 @@ const styles = StyleSheet.create({
     backgroundColor: "black",
   },
   bottomIcon: {
-    marginHorizontal: 24,
+    marginHorizontal: Dimensions.get("window").width > 360 ? 23 : 21,
   },
   bottomAddIcon: {
-    marginHorizontal: 16,
+    marginHorizontal: Dimensions.get("window").width > 360 ? 23 : 21,
     backgroundColor: "white",
     paddingHorizontal: 15,
     borderRadius: 10,

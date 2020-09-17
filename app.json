@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "tiktok-ui",
+    "name": "TikTok",
     "slug": "tiktok-ui",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -20,7 +20,7 @@
       "supportsTablet": true
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/Tiktok.png"
     }
   }
 }

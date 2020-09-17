@@ -29,7 +29,7 @@ const UserProfileDetails = (props) => {
         <View
           style={{
             flexDirection: "row",
-            marginLeft: Dimensions.get("window").width * 0.33,
+            marginLeft: Dimensions.get("window").width > 360 ?  130 : 115,
             padding: 5,
           }}
         >
